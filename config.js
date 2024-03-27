@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env', override: true });
@@ -16,29 +16,29 @@ process.env.NODE_OPTIONS = '--max_old_space_size=2560'
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG)
 module.exports = {
 	VERSION: 'v4.4.1', 
-    SESSION_ID: process.env.SESSION_ID || '',
-    MODE: (process.env.MODE || 'public').toLowerCase(),
+    SESSION_ID: process.env.SESSION_ID || '03_27_H_E_R_M_I_T_ZFBUGGF',
+    MODE: (process.env.MODE || 'private').toLowerCase(),
     HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
     SEND_READ: (process.env.READ_COMMAND || false),
-    READ_MSG: process.env.READ_MSG === 'true', 
-    MSG_LOG: convertToBool(process.env.LOG_MSG) || false, 
+    READ_MSG: process.env.READ_MSG === 'false', 
+    MSG_LOG: convertToBool(process.env.LOG_MSG) || true, 
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     LANG: process.env.LANGUAGE === undefined ? 'EN' : process.env.LANGUAGE.toUpperCase(),
     ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
-    BOT_NAME: process.env.BOT_NAME || 'ʜᴇʀᴍɪᴛ',
+    BOT_NAME: process.env.BOT_NAME || 'SNARCO',
     AUTOMUTE_MSG: process.env.AUTOMUTE_MSG || '_Group automuted!_\n_(Change this by setting var AUTOMUTE_MSG)_',
     AUTOUNMUTE_MSG: process.env.AUTOUNMUTE_MSG || '_Group autounmuted!_\n_(Change this by setting var AUTOUNMUTE_MSG)_',
     ANTILINK_MSG: process.env.ANTILINK_MSG || '_Link Not Allowed!_\n_(Change this by setting var ANTILINK_MSG)_',
     BOT_INFO: process.env.BOT_INFO || 'ʜᴇʀᴍɪᴛ;ᴀᴅɪᴛʜyᴀɴ;972528277755;https://i.imgur.com/6oRG106.jpeg',
     AUDIO_DATA: process.env.AUDIO_DATA === undefined ? 'ʜᴇʀᴍɪᴛ;ᴀᴅɪᴛʜyᴀɴ;https://i.imgur.com/fj2WE83.jpeg' : process.env.AUDIO_DATA,
-    STICKER_DATA: process.env.STICKER_DATA === undefined ? 'ʜᴇʀᴍɪᴛ;ᴀᴅɪᴛʜyᴀɴ' : process.env.STICKER_DATA,
+    STICKER_DATA: process.env.STICKER_DATA === undefined ? 'SnARrCo;elMo3AlEem' : process.env.STICKER_DATA,
     ERROR_MESSAGE: toBool(process.env.ERROR_MESSAGE), 
     SONG_THUMBNAIL: toBool(process.env.SONG_THUMBNAIL),
     WARN: process.env.WARN || '4',
     EXPRESS: toBool(process.env.EXPRESS),
     REJECT_CALL: toBool(process.env.REJECT_CALL),
     KOYEB_API_KEY: process.env.KOYEB_API_KEY || '',
-    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || '',
+    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || 'wawawamm',
     TERMUX_VPS: toBool(process.env.TERMUX || process.env.VPS),
     AUTO_STATUS_VIEW: toBool(process.env.AUTO_STATUS_VIEW),
     APIKEY: process.env.APIKEY || 'free',
